@@ -1,0 +1,14 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+<div *ngIf="dataLoaded==true" class="row"> 
+    <div *ngFor="let rental of rentals">
+        {{rental.rentalId}}
+        {{rental.brandName}}
+        {{rental.customerFirstName}}
+        {{rental.customerLastName}}
+        {{rental.rentDate}}
+        {{rental.returnDate}}
+    </div>
+</div>
